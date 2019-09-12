@@ -7,6 +7,7 @@ export interface Action {
 	error?: string | null;
 	success?: string | null;
 }
+
 export type State = {
 	count: number;
 	error?: string | null;
@@ -34,6 +35,7 @@ const baseReducer = (state: State, action: Action) => {
 
 export const AppStateContext = createContext<State>(null as any);
 export const AppDispatchContext = createContext<Dispatch<any>>(null as any);
+
 const reducer = (state: State, action: Action): State => {
 	state = baseReducer(state, action);
 

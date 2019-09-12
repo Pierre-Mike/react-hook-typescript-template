@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
-import { AppStateContext, AppDispatchContext } from "./Context";
-import { ActionType } from "./ActionType";
+import React, { useContext, FC } from "react";
+import { AppStateContext, AppDispatchContext } from "../Context/Context";
+import { ActionType } from "../Context/ActionType";
+import styles from "./Header.module.css";
 
-const Header: React.FC = () => {
+const Header: FC = () => {
 	const state = useContext(AppStateContext);
 	const dispatch = useContext(AppDispatchContext);
 	return (
