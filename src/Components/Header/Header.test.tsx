@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import Header from "./Header";
-import Context from "../Context/Context";
+import Context from "../../Context/Context";
 
 it("renders without crashing", () => {
 	const div = document.createElement("div");

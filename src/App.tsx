@@ -1,14 +1,18 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.css";
-import Header from "./Header";
-import Context from "./Context/Context";
+const Header = React.lazy(() => import("./Components/Header"));
+const Counter = React.lazy(() => import("./Components/Counter"));
+const Context = React.lazy(() => import("./Context/Context"));
 
 const App: React.FC = () => {
 	return (
 		<div className="App">
-			<Context>
-				<Header />
-			</Context>
+			<Suspense fallback={<>Loading !!!</>}>
+				<Context>
+					<Header />
+					<Counter />
+				</Context>
+			</Suspense>
 		</div>
 	);
 };
