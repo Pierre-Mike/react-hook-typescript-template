@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import Reducer from "./Reducers";
 import { ActionType } from "./Context/ActionType";
-import { State, initialState } from "./Context/Context";
+import { State, InitialState } from "./Context/Context";
 
 it("renders without crashing", () => {
 	const div = document.createElement("div");
@@ -13,16 +13,16 @@ it("renders without crashing", () => {
 
 describe("TEST REDUCER", () => {
 	it("should return the initial state", () => {
-		expect(Reducer(undefined, {})).toEqual(initialState);
+		expect(Reducer(undefined, {})).toEqual(InitialState);
 	});
 
 	it("should handle null", () => {
-		expect(Reducer(null, {})).toEqual(initialState);
+		expect(Reducer(null, {})).toEqual(InitialState);
 	});
 
 	it("should handle ADD_ERROR", () => {
 		expect(
-			Reducer(initialState, { type: ActionType.ADD_ERROR, error: "Error msg" })
+			Reducer(InitialState, { type: ActionType.ADD_ERROR, error: "Error msg" })
 		).toEqual({
 			count: 0,
 			error: "Error msg"
@@ -31,7 +31,7 @@ describe("TEST REDUCER", () => {
 
 	it("should handle ADD_SUCCESS", () => {
 		expect(
-			Reducer(initialState, {
+			Reducer(InitialState, {
 				type: ActionType.ADD_SUCCESS,
 				success: "Success msg"
 			})
@@ -42,7 +42,7 @@ describe("TEST REDUCER", () => {
 	});
 	it("should handle INCREMENT", () => {
 		expect(
-			Reducer(initialState, {
+			Reducer(InitialState, {
 				type: ActionType.INCREMENT
 			})
 		).toEqual({
@@ -52,7 +52,7 @@ describe("TEST REDUCER", () => {
 
 	it("should handle DECREMENT", () => {
 		expect(
-			Reducer(initialState, {
+			Reducer(InitialState, {
 				type: ActionType.DECREMENT
 			})
 		).toEqual({
@@ -61,7 +61,7 @@ describe("TEST REDUCER", () => {
 	});
 	it("should handle DECREMENT", () => {
 		expect(
-			Reducer(initialState, {
+			Reducer(InitialState, {
 				type: ActionType.DECREMENT
 			})
 		).toEqual({
