@@ -1,9 +1,9 @@
-import { State, Action } from "../Context/Context";
+import { State, Action, initialState } from "../Context/Context";
 import { Reducer } from "react";
 import countReducer from "./CountReduce";
 import baseReducer from "./BaseReduce";
 const combineReducers: Reducer<State, Action> = (
-	state: State,
+	state: State = initialState,
 	action: Action
 ): State => {
 	// TODO UPDATE TO VERIFY IF STATE UPDATED AND RETURN DIRECTLY OR ADD PROMISE

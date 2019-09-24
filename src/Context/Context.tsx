@@ -1,12 +1,12 @@
 import React, { useReducer, createContext, Dispatch, FC } from "react";
 import { ActionType } from "./ActionType";
-import combineReducers from "../Reducers/CombineReducers";
+import Reducers from "../Reducers";
 
-export interface Action {
-	type: ActionType;
-	error?: string | null;
-	success?: string | null;
-}
+export type Action =
+	| { type: ActionType.ADD_ERROR; error: string }
+	| { type: ActionType.ADD_SUCCESS; success: string }
+	| { type: ActionType.INCREMENT }
+	| { type: ActionType.DECREMENT };
 
 export type State = {
 	count: number;
@@ -22,7 +22,7 @@ export const AppDispatchContext = createContext<Dispatch<any>>(null as any);
 
 export const Context: FC = ({ ...props }) => {
 	const [state, dispatch] = useReducer(
-		combineReducers,
+		Reducers,
 		/* JSON.parse(localStorage.getItem(storageName)) ||  */
 		initialState
 	);
