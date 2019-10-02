@@ -11,4 +11,5 @@ const combineReducers: Reducer<State, Action> = (
 	newState = countReducer(newState, action);
 	return { ...newState };
 };
+
 export default combineReducers;

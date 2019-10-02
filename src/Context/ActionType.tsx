@@ -3,5 +3,6 @@ export enum ActionType {
 	DECREMENT,
 	INCREMENT,
 	ADD_ERROR,
-	ADD_SUCCESS
+	ADD_SUCCESS,
+	MULTIPLY_BY_2
 }

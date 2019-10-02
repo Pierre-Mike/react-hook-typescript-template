@@ -68,4 +68,16 @@ describe("TEST REDUCER", () => {
 			count: -1
 		});
 	});
+	it("should handle MUTLY_BY_2", () => {
+		expect(
+			Reducer(
+				{ count: 2 },
+				{
+					type: ActionType.MULTIPLY_BY_2
+				}
+			)
+		).toEqual({
+			count: 4
+		});
+	});
 });

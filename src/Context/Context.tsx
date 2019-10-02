@@ -7,7 +7,8 @@ export type Action =
 	| { type: ActionType.ADD_SUCCESS; success: string }
 	| { type: ActionType.INCREMENT }
 	| { type: ActionType.DECREMENT }
-	| { type: ActionType.RESET };
+	| { type: ActionType.RESET }
+	| { type: ActionType.MULTIPLY_BY_2 };
 
 export type State = {
 	count: number;
