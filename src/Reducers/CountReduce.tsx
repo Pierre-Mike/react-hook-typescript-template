@@ -12,6 +12,9 @@ const countReducer = (state: State, action: Action): State => {
 		case ActionType.DECREMENT:
 			state.count -= 1;
 			return { ...state };
+		case ActionType.MULTIPLY_BY_2:
+			state.count *= 2;
+			return { ...state };
 		default:
 			return state;
 	}
