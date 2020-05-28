@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-And update to offer a First inpression off react hook with global state reducer and UNit test on the reducer part (State of the app)
 
 ## Available Scripts
 
