@@ -1,8 +1,10 @@
 
-## Available Scripts
+## Description 📖
+Simple POC using React hook with Typescript.
 
-In the project directory, you can run:
+The goal was to test the behavior of the app by testing only the reducer(useReduce).
 
+## In this project you can run :
 ### `npm start`
 
 Runs the app in the development mode.<br>
@@ -36,6 +38,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Test Idea
-
-the idea is to test only the possible action and validate the expectation, it simplify the tests and keep the business logic testable.
